@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #003366;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav {
+            background: #0055a5;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        nav ul li a:hover {
+            background: white;
+            color: #0055a5;
+            border-radius: 5px;
+        }
+
+        section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .form-container input,
+        .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            background: #0055a5;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background: #003366;
+        }
+
+        footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Inderprastha Engineering College</h1>
+        <p>Building Bright Futures</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#department">Department</a></li>
+            <li><a href="#register">Registration</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h2>Home</h2>
+        <p>Welcome to Inderprastha Engineering College – a place where education meets excellence. We are committed to nurturing 
+           bright minds and shaping the future of our students.</p>
+        <p>Our college provides top-notch infrastructure, experienced faculty, and a wide range of 
+           extracurricular activities to ensure overall development.</p>
+        <p>Join us to explore opportunities, innovation, and success in every field of study.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Inderprastha Engineering College is one of the premier institutions providing quality education and shaping future leaders.</p>
+    </section>
+
+    <section id="department">
+        <h2>Departments</h2>
+        <p>We offer a wide variety of programs to help students achieve their career goals.</p>
+        <ul style="text-align:left; display:inline-block;">
+            <li><b>Computer Science Engineering (CSE):</b> Focus on AI, ML, Data Science, Web & App Development.</li>
+            <li><b>Information Technology (IT):</b> Specialization in Networking, Cybersecurity, Cloud Computing.</li>
+            <li><b>Mechanical Engineering (ME):</b> Emphasis on Robotics, Manufacturing, and Automotive Engineering.</li>
+            <li><b>Electrical Engineering (EE):</b> Power Systems, Renewable Energy, and Smart Grids.</li>
+            <li><b>Civil Engineering (CE):</b> Construction, Structural Engineering, and Environmental Technology.</li>
+        </ul>
+    </section>
+
+    <section id="register">
+        <h2>Student Registration Form</h2>
+        <div class="form-container">
+            <form>
+                <input type="text" name="name" placeholder="Enter Full Name" required>
+                <input type="email" name="email" placeholder="Enter Email" required>
+                <input type="text" name="contact" placeholder="Enter Contact No" required>
+                
+                <select name="department" required>
+                    <option value="">Select Department</option>
+                    <option value="cse">Computer Science Engineering</option>
+                    <option value="it">Information Technology</option>
+                    <option value="me">Mechanical Engineering</option>
+                    <option value="ee">Electrical Engineering</option>
+                    <option value="ce">Civil Engineering</option>
+                </select>
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Get in touch with us for more details and admission information.</p>
+    </section>
+
+    <footer>
+        <p><strong>Address:</strong> 63 Site IV, Sahibabad Industrial Area, Surya Nagar Flyover Road Sahibabad, Ghaziabad-Up. PIN Code-201010</p>
+        <p><strong>Email:</strong> admission@ipec.org.in</p>
+        <p><strong>Contact No:</strong> +91 9876543210</p>
+    </footer>
+
+</body>
+</html>
