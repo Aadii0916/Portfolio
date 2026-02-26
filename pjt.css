@@ -1,7 +1,7 @@
 :root {
     --primary-color: #4a90e2; /* A nice blue */
     --secondary-color: #333;
-    --background-color:aqua;
+    --background-color:rgb(7, 177, 177);
     --text-color: #505050;
     --light-gray: #e0e0e0;
     --white: #ffffff;
