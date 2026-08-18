@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Gupta — Résumé</title>
+    <meta name="description" content="Official Résumé of Aditya Gupta, Machine Learning Engineer & IT Undergrad.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-page: #0d1117;
+            --bg-paper: #ffffff;
+            --text-dark: #1f2937;
+            --text-muted: #4b5563;
+            --border-color: #e5e7eb;
+            --accent-color: #2563eb;
+            --heading-color: #111827;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-page);
+            font-family: 'Merriweather', 'Georgia', serif;
+            color: var(--text-dark);
+            line-height: 1.5;
+            padding: 40px 20px;
+        }
+
+        /* Top Action Bar (hidden on print) */
+        .resume-action-bar {
+            max-width: 850px;
+            margin: 0 auto 24px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn-back {
+            color: #58a6ff;
+            text-decoration: none;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: opacity 0.2s;
+        }
+
+        .btn-back:hover {
+            text-decoration: underline;
+        }
+
+        .btn-print {
+            background-color: #238636;
+            color: #ffffff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.2s;
+        }
+
+        .btn-print:hover {
+            background-color: #2ea043;
+        }
+
+        /* Resume Document (Sheet) */
+        .resume-paper {
+            max-width: 850px;
+            margin: 0 auto;
+            background-color: var(--bg-paper);
+            padding: 48px 56px;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            color: #111827;
+        }
+
+        /* Header */
+        .resume-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .candidate-name {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--heading-color);
+            margin-bottom: 6px;
+            letter-spacing: -0.5px;
+        }
+
+        .contact-info {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px 12px;
+        }
+
+        .contact-info a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section Styling */
+        .resume-section {
+            margin-top: 18px;
+        }
+
+        .section-heading {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.98rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #111827;
+            border-bottom: 1.5px solid #111827;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+        }
+
+        p.summary-text {
+            font-size: 0.9rem;
+            text-align: justify;
+            color: #2d3748;
+            line-height: 1.55;
+        }
+
+        /* Subheadings and Item rows */
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-top: 8px;
+            margin-bottom: 2px;
+        }
+
+        .item-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #111827;
+        }
+
+        .item-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.88rem;
+            font-style: italic;
+            color: #4b5563;
+        }
+
+        .item-date {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #374151;
+            white-space: nowrap;
+        }
+
+        /* Bullet Points */
+        ul.resume-bullets {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-top: 4px;
+            font-size: 0.88rem;
+            color: #2d3748;
+        }
+
+        ul.resume-bullets li {
+            margin-bottom: 4px;
+            line-height: 1.45;
+        }
+
+        ul.resume-bullets li strong {
+            color: #111827;
+        }
+
+        /* Skills Lists */
+        .skills-list {
+            list-style: none;
+            margin-top: 4px;
+            font-size: 0.88rem;
+            line-height: 1.6;
+        }
+
+        .skills-list li {
+            margin-bottom: 3px;
+        }
+
+        .skills-list strong {
+            font-family: 'Inter', sans-serif;
+            color: #111827;
+        }
+
+        /* Print Optimization */
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            .resume-action-bar {
+                display: none !important;
+            }
+
+            .resume-paper {
+                box-shadow: none;
+                padding: 0;
+                margin: 0;
+                max-width: 100%;
+            }
+
+            @page {
+                margin: 0.5in;
+                size: A4 portrait;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Action Bar -->
+    <div class="resume-action-bar">
+        <a href="index.html" class="btn-back">
+            &larr; Back to Portfolio
+        </a>
+        <button class="btn-print" onclick="window.print()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            Print / Save as PDF
+        </button>
+    </div>
+
+    <!-- Printable Paper -->
+    <div class="resume-paper">
+        <!-- Header -->
+        <header class="resume-header">
+            <h1 class="candidate-name">Aditya Gupta</h1>
+            <div class="contact-info">
+                <span>Phone: +91 9450778901</span>
+                <span>$|$</span>
+                <span>Email: <a href="mailto:adityagupta23132668@gmail.com">adityagupta23132668@gmail.com</a></span>
+                <span>$|$</span>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                <span>$|$</span>
+                <a href="https://github.com/Aadii0916" target="_blank">GitHub</a>
+                <span>$|$</span>
+                <a href="https://leetcode.com" target="_blank">LeetCode</a>
+            </div>
+        </header>
+
+        <!-- Professional Summary -->
+        <section class="resume-section">
+            <h2 class="section-heading">Professional Summary</h2>
+            <p class="summary-text">
+                Results-oriented Machine Learning Engineer with a strong foundation in Information Technology and hands-on experience building and deploying end-to-end predictive systems. Skilled in the Python ecosystem, with a proven track record of transforming raw data into actionable insights through web-based prediction tools. Combines a deep understanding of Data Structures and Algorithms with modern frontend skills to create seamless, data-driven user experiences.
+            </p>
+        </section>
+
+        <!-- Education -->
+        <section class="resume-section">
+            <h2 class="section-heading">Education</h2>
+            <div class="item-header">
+                <div>
+                    <span class="item-title">Bachelor of Technology in Information Technology</span><br>
+                    <span class="item-subtitle">Inderprastha Engineering College</span>
+                </div>
+                <div class="item-date">
+                    Expected Graduation: June 2027 | Current CGPA: 8/10
+                </div>
+            </div>
+            <ul class="resume-bullets">
+                <li><strong>Relevant Coursework:</strong> Data Structures, Algorithms, Database Management Systems (DBMS), Operating Systems, Computer Networks</li>
+            </ul>
+        </section>
+
+        <!-- Technical Skills -->
+        <section class="resume-section">
+            <h2 class="section-heading">Technical Skills</h2>
+            <ul class="skills-list">
+                <li>• <strong>Languages:</strong> Python, Java, JavaScript, HTML, CSS, SQL (PostgreSQL)</li>
+                <li>• <strong>Libraries &amp; Frameworks:</strong> Pandas, NumPy, Scikit-Learn, Matplotlib, Streamlit, TensorFlow, OpenCV</li>
+                <li>• <strong>Machine Learning:</strong> Random Forest, SVM, KNN, Decision Trees, Deep Learning (CNN, RNN), Natural Language Processing (NLP), NLTK, Generative AI</li>
+                <li>• <strong>Developer Tools:</strong> Git, GitHub, Docker, PyCharm, Jupyter Notebook, pgAdmin, Render</li>
+                <li>• <strong>Core Concepts:</strong> Data Structures and Algorithms (DSA), Object-Oriented Programming (OOP), Operating Systems, Computer Networks</li>
+            </ul>
+        </section>
+
+        <!-- Certifications -->
+        <section class="resume-section">
+            <h2 class="section-heading">Certifications</h2>
+            <ul class="skills-list">
+                <li>• <strong>Generative AI Camp (Multimodal AI Systems &amp; NLP)</strong> — AlgoUniversity (Y Combinator-backed), 2025</li>
+                <li>• <strong>Machine Learning Operations (MLOps) for Generative AI</strong> — Google Cloud, 2025</li>
+                <li>• <strong>Artificial Intelligence Fundamentals</strong> — IBM SkillsBuild, 2025</li>
+            </ul>
+        </section>
+
+        <!-- Technical Projects -->
+        <section class="resume-section">
+            <h2 class="section-heading">Technical Projects</h2>
+
+            <!-- Project 1 -->
+            <div class="item-header">
+                <span class="item-title">Next Word Prediction Web App</span>
+            </div>
+            <div class="item-subtitle" style="margin-bottom: 4px;">Python, TensorFlow, Keras, NumPy, Streamlit</div>
+            <ul class="resume-bullets">
+                <li><strong>Model Used:</strong> Built a Long Short-Term Memory (LSTM) neural network for sequential text prediction.</li>
+                <li><strong>Architecture:</strong> Trained the LSTM model on text sequences using a tokenizer to convert words into padded numerical sequences for prediction.</li>
+                <li><strong>UI/UX:</strong> Developed an interactive Streamlit interface where users type a sentence and the model predicts the most probable next word in real time.</li>
+                <li><strong>Deployment:</strong> Serialized the model, tokenizer, and sequence-length parameters using Pickle, loaded via cached resources for fast, efficient inference.</li>
+            </ul>
+
+            <!-- Project 2 -->
+            <div class="item-header" style="margin-top: 10px;">
+                <span class="item-title">Gaming and Health Addiction Prediction Web App</span>
+            </div>
+            <div class="item-subtitle" style="margin-bottom: 4px;">Python, Scikit-Learn, SVM, Streamlit</div>
+            <ul class="resume-bullets">
+                <li>Developed an end-to-end multi-class classification system to assess gaming addiction risk levels, achieving <strong>93%+ accuracy</strong>.</li>
+                <li>Engineered a real-time predictive pipeline using Scikit-Learn, evaluating <strong>Random Forest</strong> and <strong>Support Vector Machine (SVM)</strong> models to optimize precision and recall.</li>
+                <li>Built and deployed an interactive web dashboard using <strong>Streamlit</strong>, featuring real-time probability breakdowns and AI-driven health recommendations, hosted on Render.</li>
+                <li>Implemented data preprocessing and feature engineering on Kaggle datasets using <strong>Pandas</strong> and <strong>NumPy</strong> to ensure model robustness.</li>
+            </ul>
+        </section>
+
+        <!-- Work Experience -->
+        <section class="resume-section">
+            <h2 class="section-heading">Work Experience</h2>
+            <div class="item-header">
+                <div>
+                    <span class="item-title">Front-End Development Intern</span> — <span class="item-subtitle">Edunet Foundation | AICTE (Remote)</span>
+                </div>
+                <div class="item-date">08/2025 — 10/2025</div>
+            </div>
+            <ul class="resume-bullets">
+                <li>Designed and implemented a fully responsive and interactive portfolio website using <strong>HTML, CSS, and JavaScript</strong>, improving page load speed by 30% and ensuring 100% cross-device compatibility.</li>
+            </ul>
+        </section>
+    </div>
+
+</body>
+</html>
