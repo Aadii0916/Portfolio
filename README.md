@@ -2,7 +2,7 @@
 
 A modern, high-performance personal portfolio website built with a **developer & terminal aesthetic** inspired by modern CLI tools and clean developer websites.
 
-🌐 **Live Demo Target**: [Deployable on Cloudflare Pages / GitHub Pages / Vercel]  
+🌐 **Live Demo**: [https://portfolio.adityagupta23132668.workers.dev](https://portfolio.adityagupta23132668.workers.dev)  
 📁 **Repository**: [github.com/Aadii0916/Portfolio](https://github.com/Aadii0916/Portfolio)
 
 ---
@@ -17,7 +17,7 @@ A modern, high-performance personal portfolio website built with a **developer &
   - Instant One-Click Copy-to-Clipboard for email with toast notification.
 - **Complete Resume Integration**:
   - **Certifications**: Highlights the new **Generative AI Camp (Multimodal AI & NLP)** from AlgoUniversity (Y Combinator-backed), **MLOps for Generative AI** (Google Cloud), and **AI Fundamentals** (IBM SkillsBuild).
-  - **Technical Projects**: Next Word Prediction (LSTM + Streamlit), Gaming & Health Addiction Prediction (Scikit-Learn + Streamlit + Render).
+  - **Technical Projects**: Next Word Prediction (LSTM + Streamlit), Gaming & Health Addiction Prediction ([Live on Render](https://gaming-and-health-addiction-model.onrender.com)).
   - **Experience**: Front-End Development Intern at Edunet Foundation | AICTE.
   - **Education**: B.Tech in Information Technology at Inderprastha Engineering College (CGPA: 8.0/10).
 - **Dedicated Printable Résumé Page (`resume.html`)**: Clean ATS-compliant web résumé with one-click print/PDF download.
